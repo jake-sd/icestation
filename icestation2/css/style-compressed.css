@@ -1,0 +1,61 @@
+@charset utf-8;
+@font-face{font-family:GEISTRNDRegular;src:url(../fonts/GEIST_RND-webfont.eot?#iefix) format(embedded-opentype), url(../fonts/GEIST_RND-webfont.woff) format(woff), url(../fonts/GEIST_RND-webfont.ttf) format(truetype), url(../fonts/GEIST_RND-webfont.svg#GEISTRNDRegular) format(svg);font-weight:400;font-style:normal}
+a{color:#333;text-decoration:none;transition:all .2s linear 0}
+a:hover{color:#4d4d4d}
+h1,h2,h3,h4,h5,h6{font-family:UbuntuTitlingBold, Arial, sans-serif;text-rendering:optimizelegibility}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{text-decoration:none}
+h1.site-title{font-family:GEISTRNDRegular, Arial, sans-serif;font-size:4.5em;text-transform:uppercase;letter-spacing:5px}
+h1.site-title a{color:#333;text-shadow:0 1px 0 #FFF;transition:all .2s linear 0}
+h1.site-title a:hover{color:#1a1a1a}
+.wrapper{width:98%;margin:0 1%}
+img.bg{height:auto;left:0;min-height:100%;min-width:1024px;position:fixed;top:0;width:100%;z-index:-100}
+.header-container{margin-bottom:50px;padding:1% 0}
+.header-container header nav ul{margin-top:10px}
+.header-container header nav ul li{display:inline-block;padding-right:1em;font-size:.875em}
+.header-container header nav ul li a{text-shadow:0 1px 0 #FFF;transition:all .2s linear 0}
+.fixed{background:#FFF;position:fixed;bottom:50%;right:0;width:150px;min-height:200px;box-shadow:0 0 5px;padding:10px}
+.fixed ul{font-size:.875em}
+.fixed ul li{padding-bottom:7px}
+.main-content header.category-header{margin-bottom:50px;max-width:650px;border-bottom:1px dotted #000}
+.main-content header.category-header h1{color:#759564;font-size:3em;text-transform:uppercase;text-shadow:0 1px 0 #FFF;transition:all .2s linear 0}
+.main-content article .main{float:left;margin-bottom:50px;display:inline-block;vertical-align:top;width:60%}
+.main-content article .main header h1{font-size:2em;margin-bottom:25px;text-transform:uppercase;text-shadow:0 1px 0 #FFF;transition:all .2s linear 0}
+.main-content article .main section p{font-size:.775em;margin-bottom:25px;line-height:1.5em}
+.main-content article .meta{float:left;width:20%}
+.main-content article .meta footer{margin-top:65px;padding-left:25px}
+.main-content article .meta footer p.date{font-family:UbuntuTitlingBold, Arial, sans-serif;font-size:.75em}
+.main-content article .meta footer ul{margin:10px 0}
+.main-content article .meta footer ul li{font-size:.775em;display:block;margin-bottom:5px}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;vertical-align:baseline;margin:0;padding:0}
+body{background:url(../img/bedge_grunge.png);font-family:Courier, Arial, sans-serif;font-size:100%;line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}
+.alignnone{float:left}
+.clearfix:before,.clearfix:after{content:" ";display:table}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+.main-content article .main section a,.main-content article .meta footer ul li a{color:#c70076}
+.main-content article .main section a:hover,.main-content article .meta footer ul li a:hover{color:#fa0094}
+@media handheld,only screen and max-width 750px {
+h1.site-title{font-size:2.5em}
+.fixed{position:fixed;bottom:0;right:0;width:100%;min-height:50px;box-shadow:0 0 5px;padding:10px}
+.fixed ul{font-size:.75em;margin:15px 0 0;padding:0 25px 7px}
+.fixed ul li{display:inline-block;padding-bottom:7px;padding-right:10px}
+.fixed ul li a{background:#333;color:#FFF;padding:5px 8px}
+.fixed ul li a:hover{background:#c70076}
+.main-content article{margin-bottom:65px;border-bottom:1px dashed #333}
+.main-content article .main{float:none;display:block;margin-bottom:10px;width:100%}
+.main-content article .main header h1{margin-bottom:10px}
+.main-content article .meta footer{margin-top:0;padding:0}
+.main-content article .meta footer ul{margin-top:0}
+.main-content article .meta footer ul li{display:inline-block;padding:0 10px 0 0}
+.alignnone,.main-content article .meta{float:none;display:block;width:100%}
+}
+@media handheld,only screen and max-width 480px {
+.header-container{margin-bottom:30px}
+h1.site-title{font-size:1.75em}
+.main-content article .main header h1{font-size:1.5em}
+}

@@ -1,4 +1,3 @@
-@charset "utf-8";
 /* Import SASS Files */
 /* =====RESET===== */
 /* line 3, ../scss/_reset.scss */
@@ -89,20 +88,79 @@ a:hover {
 }
 
 /* Layout Styles Go Here */
-/* line 4, ../scss/_layout.scss */
+/* line 3, ../scss/_layout.scss */
+.wrapper.header-container a:hover {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* line 8, ../scss/_layout.scss */
+#nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: -15px 0 0 0;
+  width: 70px;
+  height: 55px;
+  float: right;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: black url("../images/hamburger.gif") no-repeat 50% 33%;
+}
+
+/* line 23, ../scss/_layout.scss */
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 32, ../scss/_layout.scss */
+#nav.opened {
+  display: block;
+  margin-top: 25px;
+  max-height: 9999px;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 39, ../scss/_layout.scss */
+  .js #nav {
+    position: relative;
+    max-height: none;
+  }
+
+  /* line 43, ../scss/_layout.scss */
+  #nav-toggle {
+    display: none;
+  }
+}
+/* line 48, ../scss/_layout.scss */
 .header-container {
   background: none repeat scroll 0 0 #FFFFFF;
   padding: 25px 0 0;
   position: fixed;
   width: 100%;
+  z-index: 500;
+  top: 0;
 }
-/* line 10, ../scss/_layout.scss */
+/* line 56, ../scss/_layout.scss */
+.header-container .head-wrap {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+/* line 62, ../scss/_layout.scss */
 .header-container header {
   border-top: 10px solid #000;
   border-bottom: 2px solid #000;
   padding: 20px 0 10px;
 }
-/* line 15, ../scss/_layout.scss */
+/* line 67, ../scss/_layout.scss */
 .header-container header h1 {
   display: inline-block;
   font-family: "Montserrat", Arial, sans-serif;
@@ -110,37 +168,37 @@ a:hover {
   margin: 0 0 0 25px;
   text-transform: uppercase;
 }
-/* line 21, ../scss/_layout.scss */
+/* line 73, ../scss/_layout.scss */
 .header-container header h1 a {
   color: black;
   font-family: "Montserrat", Arial, sans-serif;
 }
-/* line 24, ../scss/_layout.scss */
+/* line 76, ../scss/_layout.scss */
 .header-container header h1 a:hover {
   color: #196f8a;
   transition: all 0.2s linear 0s;
   border-bottom: none;
   padding-bottom: 0;
 }
-/* line 29, ../scss/_layout.scss */
+/* line 81, ../scss/_layout.scss */
 .header-container nav {
   display: inline-block;
   margin: 0 0 0 25px;
 }
-/* line 33, ../scss/_layout.scss */
+/* line 85, ../scss/_layout.scss */
 .header-container nav ul li {
   display: inline-block;
   font-size: .8em;
   padding-right: 25px;
 }
-/* line 38, ../scss/_layout.scss */
+/* line 90, ../scss/_layout.scss */
 .header-container nav ul li a {
   color: black;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 43, ../scss/_layout.scss */
+/* line 95, ../scss/_layout.scss */
 .header-container nav ul li a:hover {
   color: #196f8a;
   transition: all 0.2s linear 0s;
@@ -148,51 +206,151 @@ a:hover {
   padding-bottom: 0;
 }
 
-/* line 50, ../scss/_layout.scss */
+/* line 102, ../scss/_layout.scss */
 .main-content {
-  float: left;
-  margin: 150px 0 0;
-  max-width: 960px;
+  margin: 150px auto 0;
+  max-width: 1000px;
   width: 100%;
 }
 
-/* line 57, ../scss/_layout.scss */
-article {
-  margin: 25px 25px 75px;
+/* line 108, ../scss/_layout.scss */
+.left-side {
+  float: left;
+  width: 75%;
 }
-/* line 60, ../scss/_layout.scss */
-article header {
+
+/* line 113, ../scss/_layout.scss */
+.right-side {
+  float: right;
+  font-size: .8em;
+  line-height: 20px;
+  margin-left: 5%;
+  width: 20%;
+}
+/* line 120, ../scss/_layout.scss */
+.right-side a {
+  font-weight: 400;
+}
+/* line 124, ../scss/_layout.scss */
+.right-side li {
+  padding-bottom: 12px;
+}
+/* line 128, ../scss/_layout.scss */
+.right-side li.categories {
+  list-style: none;
+}
+
+/* line 133, ../scss/_layout.scss */
+#s {
+  border: 1px solid #000000;
+  padding: 3px 0;
+  width: 75%;
+}
+
+/* line 139, ../scss/_layout.scss */
+#searchsubmit {
+  background: none repeat scroll 0 0 #000000;
+  border: medium none;
+  color: #FFFFFF;
+  padding: 3px 0;
+}
+
+/* line 146, ../scss/_layout.scss */
+.screen-reader-text {
+  display: none;
+}
+
+/* line 150, ../scss/_layout.scss */
+.breadcrumbs {
+  margin: 0 25px;
+}
+/* line 153, ../scss/_layout.scss */
+.breadcrumbs p {
+  font-size: .7em;
+  font-weight: 300;
+}
+/* line 157, ../scss/_layout.scss */
+.breadcrumbs p a {
+  font-weight: 300;
+}
+
+/* line 163, ../scss/_layout.scss */
+.category-container {
+  margin: 25px 25px 0;
+}
+/* line 166, ../scss/_layout.scss */
+.category-container h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 25px;
 }
-/* line 63, ../scss/_layout.scss */
+/* line 173, ../scss/_layout.scss */
+.category-container p {
+  color: #585858;
+}
+
+/* line 178, ../scss/_layout.scss */
+.ice_category {
+  margin: 10px 25px;
+}
+/* line 181, ../scss/_layout.scss */
+.ice_category .attachment-post-thumbnail {
+  border: none;
+  display: block;
+  height: 100%;
+  margin-bottom: 10px;
+  max-width: 200px;
+  padding: 0;
+  width: 100%;
+}
+/* line 191, ../scss/_layout.scss */
+.ice_category li {
+  float: left;
+  font-size: 0.9em;
+  min-height: 275px;
+  padding-right: 25px;
+  text-align: center;
+  width: 200px;
+}
+
+/* line 201, ../scss/_layout.scss */
+article {
+  margin: 0 25px 75px;
+}
+/* line 204, ../scss/_layout.scss */
+article header {
+  margin: 0 0 25px;
+}
+/* line 207, ../scss/_layout.scss */
 article header h1 {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 36px;
   font-weight: 700;
 }
-/* line 68, ../scss/_layout.scss */
+/* line 212, ../scss/_layout.scss */
 article header h1 a {
   color: black;
 }
-/* line 70, ../scss/_layout.scss */
+/* line 214, ../scss/_layout.scss */
 article header h1 a:hover {
   color: #196f8a;
   transition: all 0.2s linear 0s;
   border-bottom: none;
   padding-bottom: 0;
 }
-/* line 75, ../scss/_layout.scss */
+/* line 219, ../scss/_layout.scss */
 article a {
   color: #1d80a0;
   font-weight: 700;
   text-decoration: none;
 }
-/* line 79, ../scss/_layout.scss */
+/* line 223, ../scss/_layout.scss */
 article a:hover {
   border-bottom: 1px solid #1d80a0;
   padding-bottom: 1px;
 }
-/* line 82, ../scss/_layout.scss */
+/* line 226, ../scss/_layout.scss */
 article p {
   color: #585858;
   font-family: "Roboto Slab", serif;
@@ -200,30 +358,38 @@ article p {
   line-height: 28px;
   margin-bottom: 15px;
 }
-/* line 90, ../scss/_layout.scss */
-article .alignleft {
+/* line 234, ../scss/_layout.scss */
+article .alignleft, article .attachment-post-thumbnail {
   border: 1px dotted #CCCCCC;
+  display: block;
   height: 100%;
-  max-width: 450px;
+  margin-bottom: 20px;
+  max-width: 250px;
   padding: 15px;
   width: 100%;
 }
-/* line 99, ../scss/_layout.scss */
+/* line 245, ../scss/_layout.scss */
 article footer p {
   font-size: .8em;
 }
-
-/* line 105, ../scss/_layout.scss */
-.navigation {
-  margin: 0 25px 25px;
+/* line 249, ../scss/_layout.scss */
+article footer li {
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 15px;
+}
+/* line 254, ../scss/_layout.scss */
+article footer li a {
+  font-weight: 300;
+}
+/* line 258, ../scss/_layout.scss */
+article footer li:first-child {
+  padding-left: 0;
 }
 
-/* line 109, ../scss/_layout.scss */
-#secondary {
-  color: white;
-  float: right;
-  margin: 150px 25px 0;
-  width: 30%;
+/* line 264, ../scss/_layout.scss */
+.navigation {
+  margin: 0 25px 25px;
 }
 
 /* Query for 750px (or whatever) */
@@ -232,11 +398,66 @@ article footer p {
   article .alignleft {
     max-width: 350px;
   }
+
+  /* line 9, ../scss/_queries.scss */
+  .left-side {
+    float: none;
+    width: 100%;
+  }
+
+  /* line 14, ../scss/_queries.scss */
+  .right-side {
+    border-top: 20px solid #000;
+    float: none;
+    margin-left: 0;
+    padding: 25px 25px 0;
+    width: 100%;
+  }
 }
 /* Query for 480px or smaller */
 @media handheld, only screen and (max-width: 480px) {
-  /* line 17, ../scss/_queries.scss */
+  /* line 29, ../scss/_queries.scss */
+  .header-container {
+    padding: 0;
+  }
+  /* line 34, ../scss/_queries.scss */
+  .header-container nav ul li {
+    display: block;
+    line-height: 25px;
+    height: 35px;
+  }
+
+  /* line 44, ../scss/_queries.scss */
+  header h1 {
+    font-size: 1.0em;
+  }
+
+  /* line 49, ../scss/_queries.scss */
+  .main-content {
+    margin-top: 75px;
+  }
+
+  /* line 56, ../scss/_queries.scss */
+  article header h1 {
+    font-size: 24px;
+  }
+  /* line 61, ../scss/_queries.scss */
   article .alignleft {
     max-width: 275px;
+  }
+
+  /* line 66, ../scss/_queries.scss */
+  .ice_category {
+    margin: 10px 25px;
+  }
+  /* line 69, ../scss/_queries.scss */
+  .ice_category li {
+    display: block;
+    float: none;
+    font-size: 0.9em;
+    min-height: 275px;
+    padding-right: 25px;
+    text-align: center;
+    width: 200px;
   }
 }

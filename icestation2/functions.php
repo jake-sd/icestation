@@ -1,4 +1,20 @@
 <?php
+if ( function_exists( 'add_theme_support' ) ) { 
+add_theme_support( 'post-thumbnails' );
+}
+?>
+<?php
+if ( function_exists('register_sidebar') ) {
+    register_sidebar(array(
+        'name' => 'Main Sidebar',
+        'before_widget' => '<div id="%1$s" class="widget %2$s clearfix">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+}
+?>
+<?php
 /* Register Menus Here in Array Section */
 add_theme_support( 'menus' );
 ?>
@@ -48,79 +64,6 @@ function mytheme_register_scripts() {
   ); 
 } 
 add_action('init', 'mytheme_register_scripts');
-?>
-<?php
-// Code that adds JQuery to site
-function mytheme_enqueue_scripts(){ 
-  if (!is_admin()): 
-    wp_enqueue_script('theme-custom'); //custom.js 
-  endif; //!is_admin 
-} 
-add_action('wp_print_scripts', 'mytheme_enqueue_scripts');
-?>
-<?php
-if(!function_exists('get_post_top_ancestor_id')){
-/*
- *
- This code below will generate a nice sidebar link list on a PAGE only, good for links that are "active."
- Generates Parent link then children below on either Parent or Child pages. Needs to be in a <ul> as it 
- will generate a <li>.
-
- <?php wp_list_pages( array('title_li'=>'','include'=>get_post_top_ancestor_id()) ); ?>
- <?php wp_list_pages( array('title_li'=>'','depth'=>1,'child_of'=>get_post_top_ancestor_id()) ); ?>
- */
-function get_post_top_ancestor_id(){
-    global $post;
-    
-    if($post->post_parent){
-        $ancestors = array_reverse(get_post_ancestors($post->ID));
-        return $ancestors[0];
-    }
-    
-    return $post->ID;
-}}
-?>
-<?php
-// Allow Pagination on Custom Post Types will save you hours of Googling
-$option_posts_per_page = get_option( 'posts_per_page' );
-add_action( 'init', 'my_modify_posts_per_page', 0);
-function my_modify_posts_per_page() {
-    add_filter( 'option_posts_per_page', 'my_option_posts_per_page' );
-}
-function my_option_posts_per_page( $value ) {
-    global $option_posts_per_page;
-    if ( is_tax( 'topics') ||  is_tax( 'presenters') ) { //Enter multiple Taxonomies here
-        return 2;
-    } else {
-        return $option_posts_per_page;
-    }
-}
-?>
-<?php
-/* Handy code to create custom single-yourtemplate.php files! */
-/**
-* Define a constant path to our single template folder
-*/
-define(SINGLE_PATH, TEMPLATEPATH . '/single');
-
-/**
-* Filter the single_template with our custom function
-*/
-add_filter('single_template', 'my_single_template');
-
-/**
-* Single template function which will choose our template
-*/
-function my_single_template($single) {
-    global $wp_query, $post;
-    /**
-    * Checks for single template by ID
-    */
-    if(file_exists(SINGLE_PATH . '/single-' . $post->ID . '.php'))
-        return SINGLE_PATH . '/single-' . $post->ID . '.php';
-    return $single;
-
-}
 ?>
 <?php
 /* Removes all that junk on the Dashboard */

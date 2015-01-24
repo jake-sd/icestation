@@ -1,0 +1,38 @@
+/* Fonts Go Here */
+
+$sans: 'Montserrat', Arial, sans-serif;
+$courier: Courier, Arial, sans-serif;
+$roboto: 'Roboto Slab', serif;
+
+
+/* Colors Go Here */
+
+$black:#000000;
+$white:#ffffff;
+$light: #d2d2d2;
+$dark: #585858;
+$teal: #01aca3;
+$blue: #1d80a0;
+
+
+/* Text Styles Here */
+
+body {
+	font-family: $roboto;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: $sans;
+	margin: 25px 0 10px;
+}
+
+h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+a {
+		color: $blue;
+		font-weight: 700;
+		text-decoration:none;
+		&:hover { border-bottom: 1px solid $blue; padding-bottom: 1px;}
+	}

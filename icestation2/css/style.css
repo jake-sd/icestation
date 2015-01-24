@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* Import SASS Files */
+/* =====RESET===== */
+/* line 3, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* =====HTML5 display-role reset for older browsers===== */
+/* line 14, ../scss/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 18, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 25, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 29, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =====CLEARS===== */
+/* line 36, ../scss/_reset.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 41, ../scss/_reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 45, ../scss/_reset.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* Fonts Go Here */
+/* Colors Go Here */
+/* Text Styles Here */
+/* line 20, ../scss/_fonts-colors-text.scss */
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+/* line 24, ../scss/_fonts-colors-text.scss */
+h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 25px 0 10px;
+}
+
+/* line 29, ../scss/_fonts-colors-text.scss */
+h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+/* line 33, ../scss/_fonts-colors-text.scss */
+a {
+  color: #1d80a0;
+  font-weight: 700;
+  text-decoration: none;
+}
+/* line 37, ../scss/_fonts-colors-text.scss */
+a:hover {
+  border-bottom: 1px solid #1d80a0;
+  padding-bottom: 1px;
+}
+
+/* Layout Styles Go Here */
+/* line 4, ../scss/_layout.scss */
+.header-container {
+  background: none repeat scroll 0 0 #FFFFFF;
+  padding: 25px 0 0;
+  position: fixed;
+  width: 100%;
+}
+/* line 10, ../scss/_layout.scss */
+.header-container header {
+  border-top: 10px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 20px 0 10px;
+}
+/* line 15, ../scss/_layout.scss */
+.header-container header h1 {
+  display: inline-block;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 2.0em;
+  margin: 0 0 0 25px;
+  text-transform: uppercase;
+}
+/* line 21, ../scss/_layout.scss */
+.header-container header h1 a {
+  color: black;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+/* line 24, ../scss/_layout.scss */
+.header-container header h1 a:hover {
+  color: #196f8a;
+  transition: all 0.2s linear 0s;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+/* line 29, ../scss/_layout.scss */
+.header-container nav {
+  display: inline-block;
+  margin: 0 0 0 25px;
+}
+/* line 33, ../scss/_layout.scss */
+.header-container nav ul li {
+  display: inline-block;
+  font-size: .8em;
+  padding-right: 25px;
+}
+/* line 38, ../scss/_layout.scss */
+.header-container nav ul li a {
+  color: black;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 43, ../scss/_layout.scss */
+.header-container nav ul li a:hover {
+  color: #196f8a;
+  transition: all 0.2s linear 0s;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* line 50, ../scss/_layout.scss */
+.main-content {
+  float: left;
+  margin: 150px 0 0;
+  max-width: 960px;
+  width: 100%;
+}
+
+/* line 57, ../scss/_layout.scss */
+article {
+  margin: 25px 25px 75px;
+}
+/* line 60, ../scss/_layout.scss */
+article header {
+  margin-bottom: 25px;
+}
+/* line 63, ../scss/_layout.scss */
+article header h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+/* line 68, ../scss/_layout.scss */
+article header h1 a {
+  color: black;
+}
+/* line 70, ../scss/_layout.scss */
+article header h1 a:hover {
+  color: #196f8a;
+  transition: all 0.2s linear 0s;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+/* line 75, ../scss/_layout.scss */
+article a {
+  color: #1d80a0;
+  font-weight: 700;
+  text-decoration: none;
+}
+/* line 79, ../scss/_layout.scss */
+article a:hover {
+  border-bottom: 1px solid #1d80a0;
+  padding-bottom: 1px;
+}
+/* line 82, ../scss/_layout.scss */
+article p {
+  color: #585858;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+/* line 90, ../scss/_layout.scss */
+article .alignleft {
+  border: 1px dotted #CCCCCC;
+  height: 100%;
+  max-width: 450px;
+  padding: 15px;
+  width: 100%;
+}
+/* line 99, ../scss/_layout.scss */
+article footer p {
+  font-size: .8em;
+}
+
+/* line 105, ../scss/_layout.scss */
+.navigation {
+  margin: 0 25px 25px;
+}
+
+/* line 109, ../scss/_layout.scss */
+#secondary {
+  color: white;
+  float: right;
+  margin: 150px 25px 0;
+  width: 30%;
+}
+
+/* Query for 750px (or whatever) */
+@media handheld, only screen and (max-width: 750px) {
+  /* line 4, ../scss/_queries.scss */
+  article .alignleft {
+    max-width: 350px;
+  }
+}
+/* Query for 480px or smaller */
+@media handheld, only screen and (max-width: 480px) {
+  /* line 17, ../scss/_queries.scss */
+  article .alignleft {
+    max-width: 275px;
+  }
+}

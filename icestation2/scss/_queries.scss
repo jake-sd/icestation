@@ -1,0 +1,22 @@
+/* Query for 750px (or whatever) */
+@media handheld, only screen and (max-width: 750px) {
+	article {
+		.alignleft {
+			max-width: 350px;
+		}
+	}
+
+}
+
+
+
+/* Query for 480px or smaller */
+@media handheld, only screen and (max-width: 480px) {
+	
+	article {
+		.alignleft {
+			max-width: 275px;
+		}
+	}
+
+}
